@@ -1,0 +1,10 @@
+import express from 'express';
+import { verifyToken } from '../middleware/auth.js';
+import { checkRole } from '../middleware/roleCheck.js';
+import { createTask,getTasks,updateTask,deleteTask } from '../controllers/task.controller.js';
+const router = express.Router();
+router.post('/',verifyToken,createTask);
+router.get('/',verifyToken,getTasks);
+router.put('/:id',verifyToken,updateTask);
+router.delete('/:id',verifyToken,checkRole('admin'),deleteTask);
+export default router;
