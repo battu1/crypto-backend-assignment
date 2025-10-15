@@ -23,11 +23,11 @@ It includes a secure, scalable REST API with authentication, role-based access, 
 
 ---
 
-to run backend:
+### to run backend:
 cd backend 
 npm install
 node src/app.js
-to run frontend:
+### to run frontend:
 cd frontend:
 npm install
 npm start
